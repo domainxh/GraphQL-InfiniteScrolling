@@ -1,0 +1,23 @@
+query GraphQL {
+  search(query: "Graphql", type: REPOSITORY, first: 10) {
+    edges {
+      node {
+        ... on Repository {
+          name
+          stargazerCount
+          owner {
+            avatarUrl
+            login
+          }
+        }
+      }
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      startCursor
+    }
+    repositoryCount
+  }
+}
