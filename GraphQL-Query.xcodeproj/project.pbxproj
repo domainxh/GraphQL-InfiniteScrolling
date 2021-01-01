@@ -13,6 +13,7 @@
 		6251B09B259F869C00B9DCE6 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 6251B09A259F869C00B9DCE6 /* schema.json */; };
 		6251B0B0259F957400B9DCE6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6251B0AF259F957400B9DCE6 /* ViewModel.swift */; };
 		6251B0C0259FBCF300B9DCE6 /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 6251B0BF259FBCF300B9DCE6 /* MockData.json */; };
+		6251B0C5259FC9F700B9DCE6 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6251B0C4259FC9F700B9DCE6 /* KingfisherSwiftUI */; };
 		629BF6122593D8620000D945 /* GraphQL_QueryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BF6112593D8620000D945 /* GraphQL_QueryApp.swift */; };
 		629BF6142593D8620000D945 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BF6132593D8620000D945 /* ContentView.swift */; };
 		629BF6162593D8640000D945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629BF6152593D8640000D945 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6251B0C5259FC9F700B9DCE6 /* KingfisherSwiftUI in Frameworks */,
 				6251B051259E581600B9DCE6 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +110,7 @@
 			name = "GraphQL-Query";
 			packageProductDependencies = (
 				6251B050259E581600B9DCE6 /* Apollo */,
+				6251B0C4259FC9F700B9DCE6 /* KingfisherSwiftUI */,
 			);
 			productName = "GraphQL-Query";
 			productReference = 629BF60E2593D8620000D945 /* GraphQL-Query.app */;
@@ -138,6 +141,7 @@
 			mainGroup = 629BF6052593D8620000D945;
 			packageReferences = (
 				6251B04F259E581600B9DCE6 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				6251B0C3259FC9F700B9DCE6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 629BF60F2593D8620000D945 /* Products */;
 			projectDirPath = "";
@@ -392,6 +396,14 @@
 				minimumVersion = 0.39.0;
 			};
 		};
+		6251B0C3259FC9F700B9DCE6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -399,6 +411,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6251B04F259E581600B9DCE6 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		6251B0C4259FC9F700B9DCE6 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6251B0C3259FC9F700B9DCE6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

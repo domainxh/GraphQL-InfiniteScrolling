@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel = ViewModel()
@@ -19,7 +20,7 @@ struct ContentView: View {
                         print("Reached last item, performing fetch")
                     }
                 }
-            }.navigationBarTitle("GraphQL")
+            }.navigationBarTitle("GraphQL Queries")
         }
     }
 }
@@ -34,7 +35,7 @@ struct QueryRow: View {
     var query: QueryItem
     var body: some View {
         VStack {
-            Text("Avatar URL: \(query.avatarUrl)").lineLimit(1)
+            KFImage(URL(string: "\(query.avatarUrl)")!).resizable().frame(width: 40, height: 40)
             Text("Login Name: \(query.loginName)")
             Text("Repository Name: \(query.repoName)")
             Text("Starcounts: \(query.starCount)")

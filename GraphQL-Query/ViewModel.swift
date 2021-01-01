@@ -18,11 +18,13 @@ class ViewModel: ObservableObject {
     
     func fetchQuery() {
         var query: GraphQlQuery
+        
         if queries.isEmpty {
             query = GraphQlQuery(query: "graphql", first: 15)
         } else {
             query = GraphQlQuery(query: "graphql", first: 15, after: pageInfo?.endCursor)
         }
+        
         NetworkManager.shared.apollo.fetch(query: query) { [self] result in
             switch result {
             case .success(let result):
@@ -32,7 +34,6 @@ class ViewModel: ObservableObject {
                     queries.append(queryItem)
                 }
                 pageInfo = result.data?.search.pageInfo
-                print("pageInfo: \(String(describing: pageInfo))")
             case .failure(let error):
                 print("Error: \(error)")
             }
