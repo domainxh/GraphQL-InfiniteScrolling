@@ -1,5 +1,5 @@
-query GraphQL {
-  search(query: "Graphql", type: REPOSITORY, first: 20) {
+query GraphQL($query: String!, $first:Int!, $after: String) {
+  search(query: $query, type: REPOSITORY, first: $first, after: $after) {
     edges {
       node {
         ... on Repository {

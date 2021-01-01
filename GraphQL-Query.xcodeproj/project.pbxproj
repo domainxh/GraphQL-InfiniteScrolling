@@ -12,6 +12,7 @@
 		6251B08D259E6FCF00B9DCE6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6251B08C259E6FCF00B9DCE6 /* NetworkManager.swift */; };
 		6251B09B259F869C00B9DCE6 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 6251B09A259F869C00B9DCE6 /* schema.json */; };
 		6251B0B0259F957400B9DCE6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6251B0AF259F957400B9DCE6 /* ViewModel.swift */; };
+		6251B0C0259FBCF300B9DCE6 /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 6251B0BF259FBCF300B9DCE6 /* MockData.json */; };
 		629BF6122593D8620000D945 /* GraphQL_QueryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BF6112593D8620000D945 /* GraphQL_QueryApp.swift */; };
 		629BF6142593D8620000D945 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BF6132593D8620000D945 /* ContentView.swift */; };
 		629BF6162593D8640000D945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629BF6152593D8640000D945 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		6251B08C259E6FCF00B9DCE6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6251B09A259F869C00B9DCE6 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		6251B0AF259F957400B9DCE6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		6251B0BF259FBCF300B9DCE6 /* MockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
 		629BF60E2593D8620000D945 /* GraphQL-Query.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GraphQL-Query.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		629BF6112593D8620000D945 /* GraphQL_QueryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQL_QueryApp.swift; sourceTree = "<group>"; };
 		629BF6132593D8620000D945 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				6251B09A259F869C00B9DCE6 /* schema.json */,
 				6251B089259E6F8A00B9DCE6 /* API.swift */,
+				6251B0BF259FBCF300B9DCE6 /* MockData.json */,
 				629BF62B2593EA7D0000D945 /* Queries.graphql */,
 				629BF6112593D8620000D945 /* GraphQL_QueryApp.swift */,
 				6251B08C259E6FCF00B9DCE6 /* NetworkManager.swift */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6251B09B259F869C00B9DCE6 /* schema.json in Resources */,
+				6251B0C0259FBCF300B9DCE6 /* MockData.json in Resources */,
 				629BF6192593D8640000D945 /* Preview Assets.xcassets in Resources */,
 				629BF6162593D8640000D945 /* Assets.xcassets in Resources */,
 			);

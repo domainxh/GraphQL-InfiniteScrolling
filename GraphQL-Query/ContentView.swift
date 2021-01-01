@@ -13,7 +13,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(viewModel.queries) { query in
-                QueryRow(query: query)
+                QueryRow(query: query).onAppear() {
+                    if self.viewModel.queries.last == query {
+                        viewModel.fetchQuery()
+                        print("Reached last item, performing fetch")
+                    }
+                }
             }.navigationBarTitle("GraphQL")
         }
     }
@@ -26,9 +31,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct QueryRow: View {
-    
     var query: QueryItem
-    
     var body: some View {
         VStack {
             Text("Avatar URL: \(query.avatarUrl)").lineLimit(1)

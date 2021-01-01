@@ -8,8 +8,8 @@ public final class GraphQlQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    query GraphQL {
-      search(query: "Graphql", type: REPOSITORY, first: 20) {
+    query GraphQL($query: String!, $first: Int!, $after: String) {
+      search(query: $query, type: REPOSITORY, first: $first, after: $after) {
         __typename
         edges {
           __typename
@@ -40,7 +40,18 @@ public final class GraphQlQuery: GraphQLQuery {
 
   public let operationName: String = "GraphQL"
 
-  public init() {
+  public var query: String
+  public var first: Int
+  public var after: String?
+
+  public init(query: String, first: Int, after: String? = nil) {
+    self.query = query
+    self.first = first
+    self.after = after
+  }
+
+  public var variables: GraphQLMap? {
+    return ["query": query, "first": first, "after": after]
   }
 
   public struct Data: GraphQLSelectionSet {
@@ -48,7 +59,7 @@ public final class GraphQlQuery: GraphQLQuery {
 
     public static var selections: [GraphQLSelection] {
       return [
-        GraphQLField("search", arguments: ["query": "Graphql", "type": "REPOSITORY", "first": 20], type: .nonNull(.object(Search.selections))),
+        GraphQLField("search", arguments: ["query": GraphQLVariable("query"), "type": "REPOSITORY", "first": GraphQLVariable("first"), "after": GraphQLVariable("after")], type: .nonNull(.object(Search.selections))),
       ]
     }
 
