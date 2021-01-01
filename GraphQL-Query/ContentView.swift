@@ -8,28 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var name = ""
+    @ObservedObject var viewModel = ViewModel()
     
     var body: some View {
-        Text(name).onAppear(perform: {
-            NetworkManager.shared.apollo.fetch(query: GraphQlQuery()) { result in
-                switch result {
-                case .success(let graphQLResult):
-                    DispatchQueue.main.async {
-                        print("Result: \(graphQLResult)")
-                    }
-                case .failure(let error):
-                    print("Error: \(error)")
-                }
-
-            }
-        })
+        NavigationView {
+            List(viewModel.queries) { query in
+                QueryRow(query: query)
+            }.navigationBarTitle("GraphQL")
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct QueryRow: View {
+    
+    var query: QueryItem
+    
+    var body: some View {
+        VStack {
+            Text("Avatar URL: \(query.avatarUrl)").lineLimit(1)
+            Text("Login Name: \(query.loginName)")
+            Text("Repository Name: \(query.repoName)")
+            Text("Starcounts: \(query.starCount)")
+        }
     }
 }

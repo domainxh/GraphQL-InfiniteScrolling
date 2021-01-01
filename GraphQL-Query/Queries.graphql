@@ -1,5 +1,5 @@
 query GraphQL {
-  search(query: "Graphql", type: REPOSITORY, first: 10) {
+  search(query: "Graphql", type: REPOSITORY, first: 20) {
     edges {
       node {
         ... on Repository {

@@ -69,11 +69,11 @@
 				629BF62B2593EA7D0000D945 /* Queries.graphql */,
 				629BF6112593D8620000D945 /* GraphQL_QueryApp.swift */,
 				6251B08C259E6FCF00B9DCE6 /* NetworkManager.swift */,
+				6251B0AF259F957400B9DCE6 /* ViewModel.swift */,
 				629BF6132593D8620000D945 /* ContentView.swift */,
 				629BF6152593D8640000D945 /* Assets.xcassets */,
 				629BF61A2593D8640000D945 /* Info.plist */,
 				629BF6172593D8640000D945 /* Preview Content */,
-				6251B0AF259F957400B9DCE6 /* ViewModel.swift */,
 			);
 			path = "GraphQL-Query";
 			sourceTree = "<group>";

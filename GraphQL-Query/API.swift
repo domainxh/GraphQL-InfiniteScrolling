@@ -9,7 +9,7 @@ public final class GraphQlQuery: GraphQLQuery {
   public let operationDefinition: String =
     """
     query GraphQL {
-      search(query: "Graphql", type: REPOSITORY, first: 10) {
+      search(query: "Graphql", type: REPOSITORY, first: 20) {
         __typename
         edges {
           __typename
@@ -48,7 +48,7 @@ public final class GraphQlQuery: GraphQLQuery {
 
     public static var selections: [GraphQLSelection] {
       return [
-        GraphQLField("search", arguments: ["query": "Graphql", "type": "REPOSITORY", "first": 10], type: .nonNull(.object(Search.selections))),
+        GraphQLField("search", arguments: ["query": "Graphql", "type": "REPOSITORY", "first": 20], type: .nonNull(.object(Search.selections))),
       ]
     }
 
