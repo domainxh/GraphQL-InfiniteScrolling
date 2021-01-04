@@ -34,7 +34,7 @@ struct ContentView_Previews: PreviewProvider {
 struct QueryRow: View {
     var query: QueryItem
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             KFImage(URL(string: "\(query.avatarUrl)")!).resizable().frame(width: 40, height: 40)
             Text("Login Name: \(query.loginName)")
             Text("Repository Name: \(query.repoName)")

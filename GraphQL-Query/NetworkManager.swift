@@ -11,7 +11,8 @@ import Apollo
 class NetworkManager {
     
     private init() {}
-    private let token = "89f6696ca481744f8f9d6e641c96008dc88ac267"
+    
+    private let token = "placeholder token" // https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token
     private let url = URL(string: "https://api.github.com/graphql")!
     static let shared = NetworkManager()
     
